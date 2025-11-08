@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-tekton
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-tekton
+  template:
+    metadata:
+      labels:
+        app: hello-tekton
+    spec:
+      containers:
+        - name: hello-tekton
+          image: alpine:latest
+          command: ["/bin/sh", "-c"]
+          args: ["while true; do echo 'Hello World from Tekton + Argo CD'; sleep 10; done"]
