@@ -4,7 +4,7 @@ metadata:
   name: hello-tekton
   namespace: prod
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hello-tekton
@@ -17,4 +17,4 @@ spec:
         - name: hello-tekton
           image: alpine:latest
           command: ["/bin/sh", "-c"]
-          args: ["while true; do echo 'NEW1 Hello World from Tekton + Argo CD NEW1'; sleep 10; done"]
+          args: ["while true; do echo 'NEW2 Hello World from Tekton + Argo CD NEW2'; sleep 10; done"]
