@@ -17,4 +17,4 @@ spec:
         - name: hello-tekton
           image: alpine:latest
           command: ["/bin/sh", "-c"]
-          args: ["while true; do echo 'v1.0 Hello World from Tekton + ArgoCD v1.0'; sleep 10; done"]
+          args: ["while true; do echo 'v2.0 Hello World from Tekton + ArgoCD v2.0'; sleep 10; done"]
